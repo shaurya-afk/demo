@@ -13,10 +13,6 @@ def hello_world():
 async def health():
     return {"status": "ok"}
 
-@app.get("/me")
-async def me():
-    return "Hello from Nascent"
-
 @app.get("/prod_test")
 async def prod_test():
     return "works from live prod!"
