@@ -17,6 +17,10 @@ async def health():
 async def prod_test():
     return "works from live prod!"
 
+@app.get("/about")
+async def about():
+    return {"message": "This is a demo repository"}
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
