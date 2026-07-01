@@ -17,6 +17,10 @@ async def health():
 async def me():
     return "Hello from Nascent"
 
+@app.get("/prod_test")
+async def prod_test():
+    return "works from live prod!"
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
